@@ -1,0 +1,11 @@
+.header{
+    width: 300px;
+    margin-left: 38.3%;
+    text-align: center;
+    font-family: arial;
+    position: fixed;
+    margin-top: -10px;
+    background-color: black;
+    color: white;
+    height: 40px;
+}
