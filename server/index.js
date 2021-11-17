@@ -7,6 +7,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/dist/fakestore/index.html');
+})
+
+app.get('/getdata', (req, res) => {
     https.get('https://fakestoreapi.com/products', (resp) => {
         let data = '';
         resp.on('data', (chunk) => {

@@ -11,6 +11,6 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(){
-    return this.http.get<Proformat>('http://localhost:5000');
+    return this.http.get<Proformat>('http://localhost:5000/getdata');
   }
 }
