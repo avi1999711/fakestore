@@ -6,9 +6,7 @@ const port = process.env.PORT || 5000
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/dist/fakestore/index.html');
-})
+app.use(express.static('public'));
 
 app.get('/getdata', (req, res) => {
     https.get('https://fakestoreapi.com/products', (resp) => {
